@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🤫 Bí mật...</title>
+
+<style>
+body{
+    margin:0;
+    background:#000;
+    color:#fff;
+    font-family:Arial,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+    text-align:center;
+}
+
+#loading{
+    font-size:40px;
+    animation:blink 1s infinite;
+}
+
+#troll{
+    display:none;
+}
+
+h1{
+    font-size:70px;
+    color:red;
+    animation:shake .15s infinite;
+}
+
+p{
+    font-size:35px;
+}
+
+@keyframes blink{
+50%{opacity:0;}
+}
+
+@keyframes shake{
+0%{transform:translate(2px,2px);}
+25%{transform:translate(-2px,1px);}
+50%{transform:translate(2px,-2px);}
+75%{transform:translate(-2px,-2px);}
+100%{transform:translate(2px,2px);}
+}
+</style>
+</head>
+
+<body>
+
+<div id="loading">
+⏳ Loading secret...
+</div>
+
+<div id="troll">
+<h1>💀 BRO GOT TROLLED 💀</h1>
+<p>GAH DAYUM 💔🥀</p>
+<p>WALLAHI BRO 😭🙏</p>
+<p>🗣️ SUIIIIIIIIIIIII 🔥🐐</p>
+</div>
+
+<script>
+setTimeout(()=>{
+document.getElementById("loading").style.display="none";
+document.getElementById("troll").style.display="block";
+
+document.body.requestFullscreen?.();
+
+if(navigator.vibrate){
+navigator.vibrate([300,100,300]);
+}
+},2500);
+</script>
+
+</body>
+  </html>
